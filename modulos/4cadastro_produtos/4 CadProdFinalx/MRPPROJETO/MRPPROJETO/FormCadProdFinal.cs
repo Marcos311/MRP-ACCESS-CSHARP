@@ -413,6 +413,11 @@ namespace MRPPROJETO
             FormCadastrar frm = new FormCadastrar();
             frm.ShowDialog();
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
