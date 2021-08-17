@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="Elementos\Transform.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="estoque_produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estoque_produtos.Designer.cs">
+      <DependentUpon>estoque_produtos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form0_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="estoque_produtos.resx">
+      <DependentUpon>estoque_produtos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form0_login.resx">
       <DependentUpon>Form0_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,10 +160,6 @@
     <ProjectReference Include="..\modulos\2estoque_componentes\Estoque\Controle_de_estoque_prod\2estoque_componentes.csproj">
       <Project>{bd949afa-5c6d-4ecd-9985-dc2a22d90e7e}</Project>
       <Name>2estoque_componentes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\modulos\5estoque_produtos\MRP - Controle de Estoque de Produto Final %281%29\MRP - Controle de Estoque de Produto Final\mrp_template\5estoque_componentes.csproj">
-      <Project>{80982285-0286-4192-8c13-6f212084924b}</Project>
-      <Name>5estoque_componentes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

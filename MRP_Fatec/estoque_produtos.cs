@@ -9,20 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace Controle_de_estoque_prod
+namespace MRP_Fatec
 {
-    public partial class Estoque_prod : Form
+    public partial class estoque_produtos : Form
     {
-        public Estoque_prod()
+        public estoque_produtos()
         {
             InitializeComponent();
-        }
-
-        private void bt_Ajuda_Click(object sender, EventArgs e)
-        {
-            Form2 form_ajuda = new Form2();
-            form_ajuda.ShowDialog();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,15 +28,15 @@ namespace Controle_de_estoque_prod
 
                 con.Open();
 
-                string SQL = "SELECT * FROM tb_cadpecas";
+                string SQL = "SELECT * FROM tb_produtofinal";
 
                 OleDbDataAdapter adapter = new OleDbDataAdapter(SQL, con);
 
                 DataSet DS = new DataSet();
 
-                adapter.Fill(DS, "tb_cadpecas");
+                adapter.Fill(DS, "tb_produtofinal");
 
-                dataGridView1.DataSource = DS.Tables["tb_cadpecas"];
+                dataGridView1.DataSource = DS.Tables["tb_produtofinal"];
 
             }
             catch (Exception erro)

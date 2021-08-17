@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
             this.status_spl = new System.Windows.Forms.Splitter();
-            this.spacer_esq_pnl = new System.Windows.Forms.Panel();
-            this.spacer_esq_spl = new System.Windows.Forms.Splitter();
-            this.spacer_dir_pnl = new System.Windows.Forms.Panel();
-            this.spacer_dir_spl = new System.Windows.Forms.Splitter();
             this.main_pnl = new System.Windows.Forms.Panel();
             this.listapecas_pnl = new System.Windows.Forms.Panel();
             this.listapecas_lstvw = new System.Windows.Forms.ListView();
@@ -47,15 +43,11 @@
             this.listapecas_lbl = new System.Windows.Forms.Label();
             this.cadastro_pesquisa_pnl = new System.Windows.Forms.Panel();
             this.textbox_pesquisa_pnl = new System.Windows.Forms.Panel();
-            this.pesquisa_tbc = new cadastro_componentes.Componentes.TextBoxCE();
             this.pesquisa_spacerbaixo_pnl = new System.Windows.Forms.Panel();
             this.pesquisa_lbl = new System.Windows.Forms.Label();
-            this.spacer_pesquisa_spl = new System.Windows.Forms.Splitter();
             this.btn_pesquisa_pnl = new System.Windows.Forms.Panel();
             this.pesquisa_btn = new System.Windows.Forms.Button();
             this.footer_pnl = new System.Windows.Forms.Panel();
-            this.header_pnl = new System.Windows.Forms.Panel();
-            this.h1_lbl = new System.Windows.Forms.Label();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.corpo_pnl = new System.Windows.Forms.Panel();
@@ -66,15 +58,22 @@
             this.Ajuda_tsmi = new System.Windows.Forms.ToolStripMenuItem();
             this.Ajuda_tsmsi = new System.Windows.Forms.ToolStripMenuItem();
             this.Equipe_tsmsi = new System.Windows.Forms.ToolStripMenuItem();
+            this.h1_lbl = new System.Windows.Forms.Label();
+            this.header_pnl = new System.Windows.Forms.Panel();
+            this.spacer_pesquisa_spl = new System.Windows.Forms.Splitter();
             this.menu_spl = new System.Windows.Forms.Splitter();
+            this.spacer_dir_spl = new System.Windows.Forms.Splitter();
+            this.spacer_dir_pnl = new System.Windows.Forms.Panel();
+            this.spacer_esq_pnl = new System.Windows.Forms.Panel();
+            this.pesquisa_tbc = new cadastro_componentes.Componentes.TextBoxCE();
             this.main_pnl.SuspendLayout();
             this.listapecas_pnl.SuspendLayout();
             this.cadastro_pesquisa_pnl.SuspendLayout();
             this.textbox_pesquisa_pnl.SuspendLayout();
             this.btn_pesquisa_pnl.SuspendLayout();
-            this.header_pnl.SuspendLayout();
             this.corpo_pnl.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.header_pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // status_spl
@@ -89,41 +88,6 @@
             this.status_spl.TabIndex = 4;
             this.status_spl.TabStop = false;
             // 
-            // spacer_esq_pnl
-            // 
-            this.spacer_esq_pnl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.spacer_esq_pnl.Location = new System.Drawing.Point(0, 0);
-            this.spacer_esq_pnl.Name = "spacer_esq_pnl";
-            this.spacer_esq_pnl.Size = new System.Drawing.Size(96, 553);
-            this.spacer_esq_pnl.TabIndex = 4;
-            // 
-            // spacer_esq_spl
-            // 
-            this.spacer_esq_spl.Enabled = false;
-            this.spacer_esq_spl.Location = new System.Drawing.Point(96, 0);
-            this.spacer_esq_spl.Name = "spacer_esq_spl";
-            this.spacer_esq_spl.Size = new System.Drawing.Size(3, 553);
-            this.spacer_esq_spl.TabIndex = 6;
-            this.spacer_esq_spl.TabStop = false;
-            // 
-            // spacer_dir_pnl
-            // 
-            this.spacer_dir_pnl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.spacer_dir_pnl.Location = new System.Drawing.Point(912, 0);
-            this.spacer_dir_pnl.Name = "spacer_dir_pnl";
-            this.spacer_dir_pnl.Size = new System.Drawing.Size(96, 553);
-            this.spacer_dir_pnl.TabIndex = 5;
-            // 
-            // spacer_dir_spl
-            // 
-            this.spacer_dir_spl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.spacer_dir_spl.Enabled = false;
-            this.spacer_dir_spl.Location = new System.Drawing.Point(909, 0);
-            this.spacer_dir_spl.Name = "spacer_dir_spl";
-            this.spacer_dir_spl.Size = new System.Drawing.Size(3, 553);
-            this.spacer_dir_spl.TabIndex = 7;
-            this.spacer_dir_spl.TabStop = false;
-            // 
             // main_pnl
             // 
             this.main_pnl.AutoSize = true;
@@ -131,9 +95,9 @@
             this.main_pnl.Controls.Add(this.listapecas_pnl);
             this.main_pnl.Controls.Add(this.cadastro_pesquisa_pnl);
             this.main_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.main_pnl.Location = new System.Drawing.Point(99, 112);
+            this.main_pnl.Location = new System.Drawing.Point(111, 112);
             this.main_pnl.Name = "main_pnl";
-            this.main_pnl.Size = new System.Drawing.Size(810, 417);
+            this.main_pnl.Size = new System.Drawing.Size(749, 417);
             this.main_pnl.TabIndex = 1;
             // 
             // listapecas_pnl
@@ -144,7 +108,7 @@
             this.listapecas_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listapecas_pnl.Location = new System.Drawing.Point(0, 80);
             this.listapecas_pnl.Name = "listapecas_pnl";
-            this.listapecas_pnl.Size = new System.Drawing.Size(810, 337);
+            this.listapecas_pnl.Size = new System.Drawing.Size(749, 337);
             this.listapecas_pnl.TabIndex = 6;
             // 
             // listapecas_lstvw
@@ -168,7 +132,7 @@
             this.listapecas_lstvw.Location = new System.Drawing.Point(0, 27);
             this.listapecas_lstvw.MultiSelect = false;
             this.listapecas_lstvw.Name = "listapecas_lstvw";
-            this.listapecas_lstvw.Size = new System.Drawing.Size(810, 298);
+            this.listapecas_lstvw.Size = new System.Drawing.Size(749, 298);
             this.listapecas_lstvw.TabIndex = 1;
             this.listapecas_lstvw.UseCompatibleStateImageBehavior = false;
             this.listapecas_lstvw.View = System.Windows.Forms.View.Details;
@@ -206,7 +170,7 @@
             this.listapecas_spacer_pnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listapecas_spacer_pnl.Location = new System.Drawing.Point(0, 325);
             this.listapecas_spacer_pnl.Name = "listapecas_spacer_pnl";
-            this.listapecas_spacer_pnl.Size = new System.Drawing.Size(810, 12);
+            this.listapecas_spacer_pnl.Size = new System.Drawing.Size(749, 12);
             this.listapecas_spacer_pnl.TabIndex = 2;
             // 
             // listapecas_lbl
@@ -230,7 +194,7 @@
             this.cadastro_pesquisa_pnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.cadastro_pesquisa_pnl.Location = new System.Drawing.Point(0, 0);
             this.cadastro_pesquisa_pnl.Name = "cadastro_pesquisa_pnl";
-            this.cadastro_pesquisa_pnl.Size = new System.Drawing.Size(810, 80);
+            this.cadastro_pesquisa_pnl.Size = new System.Drawing.Size(749, 80);
             this.cadastro_pesquisa_pnl.TabIndex = 5;
             // 
             // textbox_pesquisa_pnl
@@ -241,36 +205,15 @@
             this.textbox_pesquisa_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textbox_pesquisa_pnl.Location = new System.Drawing.Point(216, 0);
             this.textbox_pesquisa_pnl.Name = "textbox_pesquisa_pnl";
-            this.textbox_pesquisa_pnl.Size = new System.Drawing.Size(594, 80);
+            this.textbox_pesquisa_pnl.Size = new System.Drawing.Size(533, 80);
             this.textbox_pesquisa_pnl.TabIndex = 0;
-            // 
-            // pesquisa_tbc
-            // 
-            this.pesquisa_tbc.BackColor = System.Drawing.Color.Transparent;
-            this.pesquisa_tbc.BorderColor = System.Drawing.Color.Gray;
-            this.pesquisa_tbc.BorderSize = 1;
-            this.pesquisa_tbc.Br = System.Drawing.Color.White;
-            this.pesquisa_tbc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pesquisa_tbc.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.pesquisa_tbc.Location = new System.Drawing.Point(0, 27);
-            this.pesquisa_tbc.Name = "pesquisa_tbc";
-            this.pesquisa_tbc.PasswordChar = '\0';
-            this.pesquisa_tbc.Size = new System.Drawing.Size(594, 41);
-            this.pesquisa_tbc.TabIndex = 1;
-            this.pesquisa_tbc.TabStop = false;
-            this.pesquisa_tbc.Text = "Pesquisar Peças";
-            this.pesquisa_tbc.TextboxRaio = 6;
-            this.pesquisa_tbc.UseSystemPasswordChar = false;
-            this.pesquisa_tbc.TextChanged += new System.EventHandler(this.Pesquisa_tbc_TextChanged);
-            this.pesquisa_tbc.Enter += new System.EventHandler(this.TextBoxCE6Enter);
-            this.pesquisa_tbc.Leave += new System.EventHandler(this.TextBoxCE6Leave);
             // 
             // pesquisa_spacerbaixo_pnl
             // 
             this.pesquisa_spacerbaixo_pnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pesquisa_spacerbaixo_pnl.Location = new System.Drawing.Point(0, 68);
             this.pesquisa_spacerbaixo_pnl.Name = "pesquisa_spacerbaixo_pnl";
-            this.pesquisa_spacerbaixo_pnl.Size = new System.Drawing.Size(594, 12);
+            this.pesquisa_spacerbaixo_pnl.Size = new System.Drawing.Size(533, 12);
             this.pesquisa_spacerbaixo_pnl.TabIndex = 2;
             // 
             // pesquisa_lbl
@@ -285,15 +228,6 @@
             this.pesquisa_lbl.Size = new System.Drawing.Size(68, 27);
             this.pesquisa_lbl.TabIndex = 0;
             this.pesquisa_lbl.Text = "Pesquisar";
-            // 
-            // spacer_pesquisa_spl
-            // 
-            this.spacer_pesquisa_spl.Enabled = false;
-            this.spacer_pesquisa_spl.Location = new System.Drawing.Point(192, 0);
-            this.spacer_pesquisa_spl.Name = "spacer_pesquisa_spl";
-            this.spacer_pesquisa_spl.Size = new System.Drawing.Size(24, 80);
-            this.spacer_pesquisa_spl.TabIndex = 2;
-            this.spacer_pesquisa_spl.TabStop = false;
             // 
             // btn_pesquisa_pnl
             // 
@@ -318,30 +252,10 @@
             // footer_pnl
             // 
             this.footer_pnl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footer_pnl.Location = new System.Drawing.Point(99, 529);
+            this.footer_pnl.Location = new System.Drawing.Point(111, 529);
             this.footer_pnl.Name = "footer_pnl";
-            this.footer_pnl.Size = new System.Drawing.Size(810, 24);
+            this.footer_pnl.Size = new System.Drawing.Size(749, 24);
             this.footer_pnl.TabIndex = 3;
-            // 
-            // header_pnl
-            // 
-            this.header_pnl.Controls.Add(this.h1_lbl);
-            this.header_pnl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header_pnl.Location = new System.Drawing.Point(99, 0);
-            this.header_pnl.Name = "header_pnl";
-            this.header_pnl.Size = new System.Drawing.Size(810, 112);
-            this.header_pnl.TabIndex = 0;
-            // 
-            // h1_lbl
-            // 
-            this.h1_lbl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.h1_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.h1_lbl.Location = new System.Drawing.Point(0, 32);
-            this.h1_lbl.Name = "h1_lbl";
-            this.h1_lbl.Size = new System.Drawing.Size(810, 80);
-            this.h1_lbl.TabIndex = 0;
-            this.h1_lbl.Text = "Cadastro de peças";
-            this.h1_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // statusStrip
             // 
@@ -364,7 +278,6 @@
             this.corpo_pnl.Controls.Add(this.header_pnl);
             this.corpo_pnl.Controls.Add(this.spacer_dir_spl);
             this.corpo_pnl.Controls.Add(this.spacer_dir_pnl);
-            this.corpo_pnl.Controls.Add(this.spacer_esq_spl);
             this.corpo_pnl.Controls.Add(this.spacer_esq_pnl);
             this.corpo_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.corpo_pnl.Location = new System.Drawing.Point(0, 25);
@@ -426,7 +339,7 @@
             // 
             this.Ajuda_tsmsi.Name = "Ajuda_tsmsi";
             this.Ajuda_tsmsi.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.Ajuda_tsmsi.Size = new System.Drawing.Size(180, 22);
+            this.Ajuda_tsmsi.Size = new System.Drawing.Size(160, 22);
             this.Ajuda_tsmsi.Text = "Exibir ajuda";
             this.Ajuda_tsmsi.ToolTipText = "Abre a página de ajuda do programa";
             this.Ajuda_tsmsi.Click += new System.EventHandler(this.Ajuda_tsmsi_Click);
@@ -435,10 +348,39 @@
             // 
             this.Equipe_tsmsi.Name = "Equipe_tsmsi";
             this.Equipe_tsmsi.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.Equipe_tsmsi.Size = new System.Drawing.Size(180, 22);
+            this.Equipe_tsmsi.Size = new System.Drawing.Size(160, 22);
             this.Equipe_tsmsi.Text = "Sobre";
             this.Equipe_tsmsi.ToolTipText = "Abre a página de informações dos desenvolvedores do programa";
             this.Equipe_tsmsi.Click += new System.EventHandler(this.Equipe_tsmsi_Click);
+            // 
+            // h1_lbl
+            // 
+            this.h1_lbl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.h1_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.h1_lbl.Location = new System.Drawing.Point(0, 32);
+            this.h1_lbl.Name = "h1_lbl";
+            this.h1_lbl.Size = new System.Drawing.Size(749, 80);
+            this.h1_lbl.TabIndex = 0;
+            this.h1_lbl.Text = "Cadastro de peças";
+            this.h1_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // header_pnl
+            // 
+            this.header_pnl.Controls.Add(this.h1_lbl);
+            this.header_pnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header_pnl.Location = new System.Drawing.Point(111, 0);
+            this.header_pnl.Name = "header_pnl";
+            this.header_pnl.Size = new System.Drawing.Size(749, 112);
+            this.header_pnl.TabIndex = 0;
+            // 
+            // spacer_pesquisa_spl
+            // 
+            this.spacer_pesquisa_spl.Enabled = false;
+            this.spacer_pesquisa_spl.Location = new System.Drawing.Point(192, 0);
+            this.spacer_pesquisa_spl.Name = "spacer_pesquisa_spl";
+            this.spacer_pesquisa_spl.Size = new System.Drawing.Size(24, 80);
+            this.spacer_pesquisa_spl.TabIndex = 2;
+            this.spacer_pesquisa_spl.TabStop = false;
             // 
             // menu_spl
             // 
@@ -451,6 +393,54 @@
             this.menu_spl.Size = new System.Drawing.Size(1008, 1);
             this.menu_spl.TabIndex = 3;
             this.menu_spl.TabStop = false;
+            // 
+            // spacer_dir_spl
+            // 
+            this.spacer_dir_spl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.spacer_dir_spl.Enabled = false;
+            this.spacer_dir_spl.Location = new System.Drawing.Point(860, 0);
+            this.spacer_dir_spl.Name = "spacer_dir_spl";
+            this.spacer_dir_spl.Size = new System.Drawing.Size(3, 553);
+            this.spacer_dir_spl.TabIndex = 7;
+            this.spacer_dir_spl.TabStop = false;
+            // 
+            // spacer_dir_pnl
+            // 
+            this.spacer_dir_pnl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.spacer_dir_pnl.Location = new System.Drawing.Point(863, 0);
+            this.spacer_dir_pnl.Name = "spacer_dir_pnl";
+            this.spacer_dir_pnl.Size = new System.Drawing.Size(145, 553);
+            this.spacer_dir_pnl.TabIndex = 5;
+            // 
+            // spacer_esq_pnl
+            // 
+            this.spacer_esq_pnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("spacer_esq_pnl.BackgroundImage")));
+            this.spacer_esq_pnl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.spacer_esq_pnl.Location = new System.Drawing.Point(0, 0);
+            this.spacer_esq_pnl.Name = "spacer_esq_pnl";
+            this.spacer_esq_pnl.Size = new System.Drawing.Size(111, 553);
+            this.spacer_esq_pnl.TabIndex = 4;
+            // 
+            // pesquisa_tbc
+            // 
+            this.pesquisa_tbc.BackColor = System.Drawing.Color.Transparent;
+            this.pesquisa_tbc.BorderColor = System.Drawing.Color.Gray;
+            this.pesquisa_tbc.BorderSize = 1;
+            this.pesquisa_tbc.Br = System.Drawing.Color.White;
+            this.pesquisa_tbc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pesquisa_tbc.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.pesquisa_tbc.Location = new System.Drawing.Point(0, 27);
+            this.pesquisa_tbc.Name = "pesquisa_tbc";
+            this.pesquisa_tbc.PasswordChar = '\0';
+            this.pesquisa_tbc.Size = new System.Drawing.Size(533, 41);
+            this.pesquisa_tbc.TabIndex = 1;
+            this.pesquisa_tbc.TabStop = false;
+            this.pesquisa_tbc.Text = "Pesquisar Peças";
+            this.pesquisa_tbc.TextboxRaio = 6;
+            this.pesquisa_tbc.UseSystemPasswordChar = false;
+            this.pesquisa_tbc.TextChanged += new System.EventHandler(this.Pesquisa_tbc_TextChanged);
+            this.pesquisa_tbc.Enter += new System.EventHandler(this.TextBoxCE6Enter);
+            this.pesquisa_tbc.Leave += new System.EventHandler(this.TextBoxCE6Leave);
             // 
             // Main_form
             // 
@@ -483,11 +473,11 @@
             this.textbox_pesquisa_pnl.ResumeLayout(false);
             this.textbox_pesquisa_pnl.PerformLayout();
             this.btn_pesquisa_pnl.ResumeLayout(false);
-            this.header_pnl.ResumeLayout(false);
             this.corpo_pnl.ResumeLayout(false);
             this.corpo_pnl.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.header_pnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,14 +485,8 @@
 
         #endregion
         private System.Windows.Forms.Splitter status_spl;
-        private System.Windows.Forms.Panel spacer_esq_pnl;
-        private System.Windows.Forms.Splitter spacer_esq_spl;
-        private System.Windows.Forms.Panel spacer_dir_pnl;
-        private System.Windows.Forms.Splitter spacer_dir_spl;
         private System.Windows.Forms.Panel main_pnl;
-        private System.Windows.Forms.Panel header_pnl;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.Label h1_lbl;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel listapecas_pnl;
         private System.Windows.Forms.ListView listapecas_lstvw;
@@ -522,15 +506,20 @@
         private System.Windows.Forms.ToolStripMenuItem Ajuda_tsmi;
         private System.Windows.Forms.ToolStripMenuItem Equipe_tsmsi;
         private System.Windows.Forms.ToolStripMenuItem Ajuda_tsmsi;
-        private System.Windows.Forms.Splitter menu_spl;
         private System.Windows.Forms.Panel cadastro_pesquisa_pnl;
         private System.Windows.Forms.Panel textbox_pesquisa_pnl;
         private Componentes.TextBoxCE pesquisa_tbc;
         private System.Windows.Forms.Label pesquisa_lbl;
-        private System.Windows.Forms.Splitter spacer_pesquisa_spl;
         private System.Windows.Forms.Panel btn_pesquisa_pnl;
         private System.Windows.Forms.Button pesquisa_btn;
         private System.Windows.Forms.Panel pesquisa_spacerbaixo_pnl;
+        private System.Windows.Forms.Splitter spacer_pesquisa_spl;
+        private System.Windows.Forms.Panel header_pnl;
+        private System.Windows.Forms.Label h1_lbl;
+        private System.Windows.Forms.Splitter menu_spl;
+        private System.Windows.Forms.Splitter spacer_dir_spl;
+        private System.Windows.Forms.Panel spacer_dir_pnl;
+        private System.Windows.Forms.Panel spacer_esq_pnl;
     }
 }
 

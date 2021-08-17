@@ -8,96 +8,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace mrp_template
 {
     public partial class main_form : Form
     {
-        // MessageBox.Show("teste"); debug
 
-        // funcoes personalizadas
-        /// dimensiona os elementos do layout em relacao ah statusbar
-        private void RedimensionaPainelMeio()
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            // a "responsividade" que tem pra hoje
-            // tamanho dos espaços laterais do formulário
-            if (statusStrip.Width >= 1680)
+            try
             {
-                spacer_esq_pnl.Width = 128;
-                spacer_dir_pnl.Width = 128;
-            } else if (statusStrip.Width >= 1280)
-            {
-                spacer_esq_pnl.Width = 96;
-                spacer_dir_pnl.Width = 96;
-            } else if (statusStrip.Width >= 800)
-            {
-                spacer_esq_pnl.Width = 64;
-                spacer_dir_pnl.Width = 64;
-            } else
-            {
-                spacer_esq_pnl.Width = 32;
-                spacer_dir_pnl.Width = 32;
+                string path = Application.StartupPath;
+
+                OleDbConnection con = new OleDbConnection(@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source=" + path + @"\database\DBP1-MRP_final.mdb");
+
+                con.Open();
+
+                string SQL = "SELECT * FROM tb_produtofinal";
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(SQL, con);
+
+                DataSet DS = new DataSet();
+
+                adapter.Fill(DS, "tb_produtofinal");
+
+                dataGridView1.DataSource = DS.Tables["tb_produtofinal"];
+
             }
-                                   
-            }
-        /// remove o dummy text se o usuario foca na caixa de texto
-        void ApagaDummy(TextBoxCE caixaTexto, string dummy)
-        {
-            if (caixaTexto.Text == dummy)
+            catch (Exception erro)
             {
-                caixaTexto.Text = "";
-                caixaTexto.ForeColor = SystemColors.ControlText;
+                MessageBox.Show(erro.Message);
             }
-        }
-        /// reescreve o dummy text se a caixa saiu de foco sem o usuario digitar nada
-        void EscreveDummy(TextBoxCE caixaTexto, string dummy)
-        {
-            if (caixaTexto.Text == "")
-            {
-                caixaTexto.Text = dummy;
-                caixaTexto.ForeColor = SystemColors.GrayText;
-            }
-        }
-
-        // funcao principal
-        public main_form()
-        {
-            // executa os comandos do arquivo Form1.Designer.cs
-            InitializeComponent();
-        }
-
-        // eventos dos objetos
-        /// eventos das textboxes
-        //// executa quando a textbox entra em foco
-               
-        private void TextBoxCE6Enter(object sender, EventArgs e)
-        {
-            pesquisa_tbc.BorderColor = SystemColors.Highlight;
-            ApagaDummy(pesquisa_tbc, "Campo de Texto");
-        }
-        private void TextBoxCE6Leave(object sender, EventArgs e)
-        {
-            pesquisa_tbc.BorderColor = Color.Gray;
-            EscreveDummy(pesquisa_tbc, "Campo de Texto");
-        }
-
-        private void LstviewPecas_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            
-        }
-
-        /// eventos do formulario
-        //// executa quando o form inicia
-        private void Main_form_Load(object sender, EventArgs e)
-        {
-            // se não tiver barra de rolagem
-            RedimensionaPainelMeio();
-
-        }
-        //// executa quando o form é redimensionado
-        private void Main_form_Resize(object sender, EventArgs e)
-        {
-            RedimensionaPainelMeio();
         }
     }
 }

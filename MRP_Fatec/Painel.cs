@@ -70,11 +70,7 @@ namespace MRP_Fatec
 
         private void EstProd_BtnClick(object sender, EventArgs e)
         {
-            // gambiarra pra substituir o modulo fantasma
-            ///string caminho = Application.StartupPath;
-            ///string exe = caminho + @"\..\..\..\modulos\5estoque_produtos\mrp_template.exe";
-            ///Process.Start(exe);
-            mrp_template.main_form frm = new mrp_template.main_form();
+            MRP_Fatec.estoque_produtos frm = new MRP_Fatec.estoque_produtos();
             frm.ShowDialog();
         }
 
